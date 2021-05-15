@@ -1,0 +1,5 @@
+name: Websocket
+version: ${project.version}
+main: me.senyitko.main.Main
+api-version: 1.16
+authors: [ Senyitko ]
