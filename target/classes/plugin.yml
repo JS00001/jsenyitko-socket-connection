@@ -3,3 +3,10 @@ version: 1.0-SNAPSHOT
 main: me.senyitko.main.Main
 api-version: 1.16
 authors: [ Senyitko ]
+commands:
+  tp:
+    description: Teleport to a player
+    usage: /tp <player>
+  ping:
+    description: Ping a location
+    usage: /ping
