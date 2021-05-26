@@ -10,3 +10,9 @@ commands:
   ping:
     description: Ping a location
     usage: /ping
+  death:
+    description: Check Death Location
+    usage: /death
+  help:
+    description: Check Help Menu
+    usage: /help
