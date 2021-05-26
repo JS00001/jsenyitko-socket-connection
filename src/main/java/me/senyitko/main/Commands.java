@@ -17,7 +17,13 @@ public class Commands implements CommandExecutor {
 
         // Ping Command
         if (command.getName().equalsIgnoreCase("ping")) {
-            Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.BOLD + "" + ChatColor.RED + sender.getName() + "'s Coords" + ChatColor.GRAY + "] " + ChatColor.WHITE + ((Player) sender).getLocation().getBlockX() + "," + ((Player) sender).getLocation().getBlockY() + "," + ((Player) sender).getLocation().getBlockZ());
+            if (args.length == 1) {
+
+                String playerCoords = "(" + ((Player) sender).getLocation().getBlockX() + "," + ((Player) sender).getLocation().getBlockY() + "," + ((Player) sender).getLocation().getBlockZ() + ")";
+                Bukkit.broadcastMessage(ChatColor.GRAY + "[" + ChatColor.BOLD + "" + ChatColor.RED + sender.getName() + "'s Coords" + ChatColor.GRAY + "] " + ChatColor.WHITE + playerCoords);
+                ws.sendText("{\"type\":\"ping\",\"player\":\"pName\", \"coords\":\"coordsList\"}".replace("pName", p.getName()).replace("coordsList", args[0] + ": " + playerCoords));
+
+            } else p.sendMessage(ChatColor.RED + "Specify a descriptor for this location. Ex: /ping stronghold");
         }
 
         else if(command.getName().equalsIgnoreCase("event")) {
