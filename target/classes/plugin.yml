@@ -6,13 +6,11 @@ authors: [ Senyitko ]
 commands:
   tp:
     description: Teleport to a player
-    usage: /tp <player>
   ping:
     description: Ping a location
-    usage: /ping
   death:
     description: Check Death Location
-    usage: /death
   help:
     description: Check Help Menu
-    usage: /help
+  name:
+    description: Rename an item

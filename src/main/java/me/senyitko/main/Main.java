@@ -55,6 +55,7 @@ public final class Main extends JavaPlugin {
 
     private void registerCommands() {
         this.getCommand("death").setExecutor(new Commands());
+        this.getCommand("name").setExecutor(new Commands());
         this.getCommand("ping").setExecutor(new Commands());
         this.getCommand("help").setExecutor(new Commands());
         this.getCommand("tp").setExecutor(new Commands());
